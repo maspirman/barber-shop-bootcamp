@@ -318,6 +318,13 @@ hr{
 .single-service:hover .service-desct{
     /* bottom: 40%; */
     opacity: 1;
+
+    width: 80%;
+    padding:0 10%;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 @media screen and (max-width:770px) {
@@ -332,7 +339,7 @@ hr{
         margin:5px auto;
     }
     .single-service:hover .service-desct{
-        bottom: 25% !important;
+        /* bottom: 25% !important; */
     
     } 
 }
