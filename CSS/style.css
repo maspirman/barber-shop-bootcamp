@@ -3,8 +3,13 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    
 }
+
+body{
+    width:100vw;
+    max-width: 100%;
+}
+
 #banner{
     background:linear-gradient(rgba(0,0,0,0.5),#009688),url(../images/Barber_Shop_img/banner.jpg);
     background-size:cover;
@@ -21,6 +26,8 @@
     color: #fff;
     text-align: center;
     padding: 180px 0;
+
+    /* MAKING DIV VERTICAL CENTER */
     position: absolute;
     top: 50%;
     -ms-transform: translateY(-50%);
@@ -113,15 +120,13 @@ nav ul li a{
     margin-top: 15px;
 }
 
+/* MEDIA SCREEN <= 420px */
 @media screen and (max-width:420px){
      #banner{
        height: 100vh;
      }
     .logo{
         width: 100px;
-    }
-    .banner-text{
-        padding:80px;
     }
     .banner-text h1{
         padding-top: 100px;
@@ -283,18 +288,21 @@ nav ul li a{
     opacity: 0;
     transition: 1s;
 }
+
 .single-service:hover .overlay{
     opacity: 1;
 }
 
 .service-desct{
-    width: 80%;
-    position: absolute;
-    bottom: 40%;
-    left: 50%;
-    transform: translateX(-50%);
     opacity: 0;
     transition: 1s;
+
+    width: 80%;
+    padding:0 10%;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 hr{
     background: #fff;
@@ -308,9 +316,8 @@ hr{
 }
 
 .single-service:hover .service-desct{
-    bottom: 40%;
+    /* bottom: 40%; */
     opacity: 1;
-
 }
 
 @media screen and (max-width:770px) {
@@ -327,9 +334,7 @@ hr{
     .single-service:hover .service-desct{
         bottom: 25% !important;
     
-    }
-    
-    
+    } 
 }
 
 
@@ -359,7 +364,6 @@ hr{
 }
 .testimonial-cols p{
     font-size: 14px;
-
 }
 .user{
     display: flex;
@@ -385,9 +389,18 @@ hr{
     transform: translateY(-7px);
 }
 
-@media screen and (max-width:770px){
+@media screen and (max-width:767px){
     .testimonial-cols{
+        min-height: 100px;
         flex-basis: 100%;
+    }
+    .user{
+        margin: 0;
+    }
+}
+@media screen and (min-width:768px){
+    .testimonial-cols{
+        min-height: 200px;
     }
 }
 
