@@ -20,8 +20,12 @@
 .banner-text{
     color: #fff;
     text-align: center;
-    padding: 180px;
-
+    padding: 180px 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
 }
 .banner-text h1{
     font-size: 130px;
